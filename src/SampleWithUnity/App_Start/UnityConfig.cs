@@ -1,7 +1,10 @@
 using System;
+using AutoMapper;
+using SampleWithUnity.Infrastructure;
 using SampleWithUnity.Repository;
 using SampleWithUnity.Service;
 using Unity;
+using Unity.Lifetime;
 
 namespace SampleWithUnity
 {
@@ -64,6 +67,18 @@ namespace SampleWithUnity
 
             // register factory factory for the singleton
             // container.RegisterFactory<IServiceClientFactory>((x) => new ServiceClientFactory(strategy), FactoryLifetime.Singleton);
+
+            // AutoMapper DI
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new ControllerProfile());
+                cfg.AddProfile(new ServiceProfile());
+            });
+
+            container.RegisterInstance<IMapper>(
+                config.CreateMapper(),
+                new ContainerControlledLifetimeManager());
         }
     }
 }

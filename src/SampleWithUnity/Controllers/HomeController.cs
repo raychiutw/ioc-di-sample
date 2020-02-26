@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using AutoMapper;
 using SampleWithUnity.Service;
 
 namespace SampleWithUnity.Controllers
@@ -6,10 +7,14 @@ namespace SampleWithUnity.Controllers
     public class HomeController : Controller
     {
         private readonly IProductService _productService;
+        private readonly IMapper _mapper;
 
-        public HomeController(IProductService productService)
+        public HomeController(
+            IProductService productService,
+            IMapper mapper)
         {
             this._productService = productService;
+            this._mapper = mapper;
         }
 
         public ActionResult Index()
