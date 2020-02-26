@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05.UseUnity", "05.UseUnity"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleWithUnity", "SampleWithUnity\SampleWithUnity.csproj", "{5FFB1FB5-82F9-4414-98E1-A8450476B3E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleConsoleWithUnity", "..\..\loc-di-sample\src\SampleConsoleWithUnity\SampleConsoleWithUnity.csproj", "{181C3F30-F55F-42AB-9DD2-CA81C3FECB35}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleConsoleWithUnity", "SampleConsoleWithUnity\SampleConsoleWithUnity.csproj", "{181C3F30-F55F-42AB-9DD2-CA81C3FECB35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
